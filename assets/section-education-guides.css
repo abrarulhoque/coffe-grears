@@ -1,0 +1,479 @@
+.education-guides {
+  margin-top: 3rem;
+}
+
+.education-guides__subtitle {
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  color: rgba(var(--color-foreground), 0.75);
+  text-align: center;
+}
+
+.education-guides__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: 2.4rem;
+}
+
+.education-guides__item {
+  position: relative;
+  display: flex;
+}
+
+/* RTL Support */
+[dir="rtl"] .education-guides__list {
+  direction: rtl;
+}
+
+[dir="rtl"] .education-guides__item {
+  direction: ltr;
+}
+
+/* Education Card */
+.education-card {
+  position: relative;
+  width: 100%;
+  border-radius: 1.6rem;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: 2px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(45deg, transparent, transparent) border-box;
+  box-shadow: 0 8px 32px rgba(139, 90, 43, 0.08);
+}
+
+/* Trust-building gradient border on hover */
+.education-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, 
+    #8B5A2B, #D2691E, #F4A460, #DEB887, 
+    #CD853F, #A0522D, #8B5A2B);
+  background-size: 400% 400%;
+  border-radius: 1.6rem;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  animation: trustGradient 4s ease infinite;
+}
+
+@keyframes trustGradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.education-card:hover::before {
+  opacity: 1;
+}
+
+.education-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 24px 48px rgba(139, 90, 43, 0.18);
+}
+
+.education-card__image-wrapper {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  border-radius: 1.4rem;
+}
+
+.education-card__image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.education-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.education-card__image--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(var(--color-foreground), 0.04);
+}
+
+.education-card__image--placeholder .placeholder-svg {
+  width: 50%;
+  height: 50%;
+  opacity: 0.3;
+}
+
+/* Overlay */
+.education-card__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.2) 40%,
+    rgba(139, 90, 43, 0.6) 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  padding: 2.4rem;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* RTL Overlay positioning */
+[dir="rtl"] .education-card__overlay {
+  direction: rtl;
+}
+
+.education-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+  direction: inherit;
+  transform: translateY(10px);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.education-card__title {
+  color: white;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  letter-spacing: -0.02em;
+  font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.education-card__description {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* CTA Button with underline grow animation */
+.education-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.4rem;
+  padding: 1.2rem 2rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 3rem;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  width: fit-content;
+  opacity: 0;
+  transform: translateY(20px);
+  position: relative;
+  overflow: hidden;
+  font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Underline grow animation */
+.education-card__link::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.8);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform: translateX(-50%);
+}
+
+.education-card:hover .education-card__link::after {
+  width: calc(100% - 4rem);
+}
+
+/* RTL CTA Button */
+[dir="rtl"] .education-card__link {
+  flex-direction: row-reverse;
+}
+
+.education-card__cta {
+  white-space: nowrap;
+}
+
+.education-card__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.education-card__arrow svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+/* RTL Arrow */
+[dir="rtl"] .education-card__arrow svg {
+  transform: scaleX(-1);
+}
+
+/* Hover Effects */
+.education-card:hover .education-card__img {
+  transform: scale(1.1) rotate(2deg);
+}
+
+.education-card:hover .education-card__overlay {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.3) 30%,
+    rgba(139, 90, 43, 0.8) 100%
+  );
+}
+
+.education-card:hover .education-card__content {
+  transform: translateY(0);
+}
+
+.education-card:hover .education-card__description {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+
+.education-card:hover .education-card__link {
+  opacity: 1;
+  transform: translateY(0);
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.4);
+  transition-delay: 0.2s;
+}
+
+.education-card:hover .education-card__arrow {
+  transform: translateX(6px);
+}
+
+/* RTL Hover Arrow */
+[dir="rtl"] .education-card:hover .education-card__arrow {
+  transform: translateX(-6px);
+}
+
+/* Trust building elements - subtle pulse on hover */
+.education-card:hover {
+  animation: trustPulse 2s ease-in-out infinite;
+}
+
+@keyframes trustPulse {
+  0%, 100% {
+    box-shadow: 0 24px 48px rgba(139, 90, 43, 0.18);
+  }
+  50% {
+    box-shadow: 0 28px 56px rgba(139, 90, 43, 0.22);
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 989px) {
+  .education-guides__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .education-guides {
+    margin-top: 2rem;
+  }
+
+  .education-guides__subtitle {
+    font-size: 1.4rem;
+  }
+
+  .education-guides__list {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+
+  .education-card {
+    border-radius: 1.2rem;
+  }
+
+  .education-card::before {
+    border-radius: 1.2rem;
+  }
+
+  .education-card__overlay {
+    padding: 2rem;
+  }
+
+  .education-card__title {
+    font-size: 2rem;
+  }
+
+  .education-card__description {
+    font-size: 1.4rem;
+  }
+
+  .education-card__link {
+    font-size: 1.3rem;
+    padding: 1rem 1.6rem;
+    gap: 0.8rem;
+  }
+
+  .education-card__arrow {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .education-card:hover .education-card__link::after {
+    width: calc(100% - 3.2rem);
+  }
+}
+
+@media screen and (max-width: 549px) {
+  .education-card__overlay {
+    padding: 1.6rem;
+  }
+
+  .education-card__title {
+    font-size: 1.8rem;
+  }
+
+  .education-card__description {
+    font-size: 1.3rem;
+  }
+
+  .education-card__link {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.4rem;
+    gap: 0.6rem;
+  }
+
+  .education-card__arrow {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  .education-card:hover .education-card__link::after {
+    width: calc(100% - 2.8rem);
+  }
+}
+
+/* Performance optimizations */
+.education-card {
+  will-change: transform, box-shadow;
+}
+
+.education-card__img {
+  will-change: transform;
+}
+
+.education-card__arrow {
+  will-change: transform;
+}
+
+.education-card__content {
+  will-change: transform;
+}
+
+.education-card__description,
+.education-card__link {
+  will-change: opacity, transform;
+}
+
+.education-card__link::after {
+  will-change: width;
+}
+
+/* Focus States for Accessibility */
+.education-card__link:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.8);
+  outline-offset: 3px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.education-card:focus-within .education-card__img {
+  transform: scale(1.1) rotate(2deg);
+}
+
+.education-card:focus-within .education-card__overlay {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.3) 30%,
+    rgba(139, 90, 43, 0.8) 100%
+  );
+}
+
+.education-card:focus-within .education-card__description {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.education-card:focus-within .education-card__link::after {
+  width: calc(100% - 4rem);
+}
+
+/* Animation delays for staggered reveals */
+.education-guides__item:nth-child(1) .education-card__description {
+  transition-delay: 0.1s;
+}
+
+.education-guides__item:nth-child(1) .education-card__link {
+  transition-delay: 0.2s;
+}
+
+.education-guides__item:nth-child(2) .education-card__description {
+  transition-delay: 0.15s;
+}
+
+.education-guides__item:nth-child(2) .education-card__link {
+  transition-delay: 0.25s;
+}
+
+.education-guides__item:nth-child(3) .education-card__description {
+  transition-delay: 0.2s;
+}
+
+.education-guides__item:nth-child(3) .education-card__link {
+  transition-delay: 0.3s;
+}
+
+/* Email magnet tie-in styling */
+.education-guides__subtitle {
+  position: relative;
+}
+
+.education-guides__subtitle::after {
+  content: '📧';
+  margin-left: 0.5rem;
+  opacity: 0.7;
+  font-size: 0.9em;
+}
+
+[dir="rtl"] .education-guides__subtitle::after {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}

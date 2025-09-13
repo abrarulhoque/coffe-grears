@@ -24,55 +24,6 @@
         "button_link_2": ""
       }
     },
-    "image_banner_CFp7TD": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_fJWEc8": {
-          "type": "heading",
-          "settings": {
-            "heading": "",
-            "heading_size": "h1"
-          }
-        },
-        "text_7dNhtR": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "text_style": "body"
-          }
-        },
-        "buttons_QQnhcG": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop Now | تسوق الآن",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "Contact us | تواصل معنا",
-            "button_link_2": "shopify://pages/contact",
-            "button_style_secondary_2": true
-          }
-        }
-      },
-      "block_order": [
-        "heading_fJWEc8",
-        "text_7dNhtR",
-        "buttons_QQnhcG"
-      ],
-      "name": "t:sections.image-banner.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/Coffee_Gears_Hero_Banner.jpg",
-        "image_overlay_opacity": 0,
-        "image_height": "adapt",
-        "image_behavior": "none",
-        "desktop_content_position": "bottom-left",
-        "desktop_content_alignment": "center",
-        "show_text_box": false,
-        "color_scheme": "",
-        "stack_images_on_mobile": true,
-        "mobile_content_alignment": "center",
-        "show_text_below": true
-      }
-    },
     "slideshow_9KWh8y": {
       "type": "slideshow",
       "blocks": {
@@ -213,7 +164,6 @@
   },
   "order": [
     "value_hero_pRJUFL",
-    "image_banner_CFp7TD",
     "slideshow_9KWh8y",
     "rich_text",
     "collection_list_pQRhEJ",

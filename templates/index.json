@@ -62,6 +62,88 @@
         "accessibility_info": "Slideshow about Coffee Gears"
       }
     },
+    "category_grid_JMXEdj": {
+      "type": "category-grid",
+      "blocks": {
+        "category_HkcCGQ": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/studio-product-still-life-of-brewing-devices-premium-coffee-tools-aesthetic-soft-side-lighting-matte-backdrop-in-warm-neutral-tones-minimal-composition-photorealistic.png",
+            "label": "أجهزة التحضير",
+            "link": ""
+          }
+        },
+        "category_JJmCBp": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/studio-product-still-life-of-grinders-premium-coffee-tools-aesthetic-soft-side-lighting-matte-backdrop-in-warm-neutral-tones-minimal-composition-photorealistic.png",
+            "label": "مطاحن القهوة",
+            "link": ""
+          }
+        },
+        "category_jQ9KGt": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/studio-product-still-life-of-mugs-premium-coffee-tools-aesthetic-soft-side-lighting-matte-backdrop-in-warm-neutral-tones-minimal-composition-photorealistic.png",
+            "label": "الفلاتر",
+            "link": ""
+          }
+        },
+        "category_bpxVpd": {
+          "type": "category",
+          "settings": {
+            "label": "أكواب",
+            "link": ""
+          }
+        },
+        "category_zDUKkG": {
+          "type": "category",
+          "settings": {
+            "label": "أدوات الباريستا",
+            "link": ""
+          }
+        },
+        "category_iQBdHG": {
+          "type": "category",
+          "settings": {
+            "label": "الملحقات",
+            "link": ""
+          }
+        },
+        "category_xcNaPz": {
+          "type": "category",
+          "settings": {
+            "label": "قطع الغيار",
+            "link": ""
+          }
+        },
+        "category_RQ8ewk": {
+          "type": "category",
+          "settings": {
+            "label": "وصل حديثًا",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "category_HkcCGQ",
+        "category_JJmCBp",
+        "category_jQ9KGt",
+        "category_bpxVpd",
+        "category_zDUKkG",
+        "category_iQBdHG",
+        "category_xcNaPz",
+        "category_RQ8ewk"
+      ],
+      "name": "Category Grid",
+      "settings": {
+        "title": "Shop by Category",
+        "heading_size": "h1",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "rich_text": {
       "type": "rich-text",
       "blocks": {
@@ -165,6 +247,7 @@
   "order": [
     "value_hero_pRJUFL",
     "slideshow_9KWh8y",
+    "category_grid_JMXEdj",
     "rich_text",
     "collection_list_pQRhEJ",
     "featured-collection"

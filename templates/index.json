@@ -216,6 +216,52 @@
         "padding_bottom": 36
       }
     },
+    "education_guides_Ud6Exz": {
+      "type": "education-guides",
+      "blocks": {
+        "education_guide_jcwyq9": {
+          "type": "education_guide",
+          "settings": {
+            "image": "shopify://shop_images/editorial-macro-shot-of-soft-warm-light-minimal-props-high-detail-photorealistic.png",
+            "guide_title": "اختيار المطحنة المناسبة",
+            "description": "تعرف على أفضل أنواع المطاحن لقهوتك المثالية",
+            "blog_link": ""
+          }
+        },
+        "education_guide_DjFFFX": {
+          "type": "education_guide",
+          "settings": {
+            "image": "shopify://shop_images/editorial-macro-shot-of-soft-warm-light-minimal-props-high-detail-photorealistic_a7ac5b8b-c722-445b-a869-4ba0fae04b88.png",
+            "guide_title": "كيف تضبط الاستخلاص",
+            "description": "خطوات بسيطة للحصول على طعم مثالي",
+            "blog_link": ""
+          }
+        },
+        "education_guide_PJ7XmB": {
+          "type": "education_guide",
+          "settings": {
+            "image": "shopify://shop_images/editorial-macro-shot-of-soft-warm-light-minimal-props-high-detail-photorealistic_70151a76-0496-4bee-833e-da84be64a3e2.png",
+            "guide_title": "دليل الفلاتر",
+            "description": "أنواع الفلاتر وتأثيرها على طعم القهوة",
+            "blog_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "education_guide_jcwyq9",
+        "education_guide_DjFFFX",
+        "education_guide_PJ7XmB"
+      ],
+      "name": "Education Guides",
+      "settings": {
+        "title": "Mini Brew Guides",
+        "subtitle": "",
+        "heading_size": "h1",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "collection_list_pQRhEJ": {
       "type": "collection-list",
       "blocks": {
@@ -299,6 +345,7 @@
     "category_grid_JMXEdj",
     "rich_text",
     "brewing_method_Lrhnkg",
+    "education_guides_Ud6Exz",
     "collection_list_pQRhEJ",
     "featured-collection"
   ]

@@ -1,0 +1,216 @@
+{{ 'section-announcement-bar-mini-trust.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign announcement_text_ar = "شحن مجاني للطلبات فوق 20 د.ك | منتجات أصلية 100% | دعم واتساب"
+  assign announcement_text_en = "Free shipping over 20 KWD | 100% genuine | WhatsApp support"
+  
+  assign current_locale = request.locale.iso_code
+  assign is_rtl = false
+  if current_locale == 'ar'
+    assign is_rtl = true
+  endif
+-%}
+
+<div 
+  class="announcement-bar-mini-trust color-{{ section.settings.color_scheme }} gradient{% if is_rtl %} announcement-bar-mini-trust--rtl{% endif %}"
+  data-announcement-bar
+  style="--animation-delay: {{ section.settings.animation_delay }}ms;"
+>
+  <div class="page-width announcement-bar-mini-trust__container">
+    <div class="announcement-bar-mini-trust__content" data-announcement-content>
+      
+      <!-- Full content for desktop -->
+      <div class="announcement-bar-mini-trust__full">
+        <div class="announcement-bar-mini-trust__item" data-trust-item="shipping">
+          <div class="announcement-bar-mini-trust__icon" data-icon="shipping">
+            {{ 'icon-truck.svg' | inline_asset_content }}
+          </div>
+          <span class="announcement-bar-mini-trust__text">
+            {% if is_rtl %}
+              شحن مجاني للطلبات فوق 20 د.ك
+            {% else %}
+              Free shipping over 20 KWD
+            {% endif %}
+          </span>
+        </div>
+        
+        <div class="announcement-bar-mini-trust__divider"></div>
+        
+        <div class="announcement-bar-mini-trust__item" data-trust-item="genuine">
+          <div class="announcement-bar-mini-trust__icon" data-icon="genuine">
+            {{ 'icon-checkmark.svg' | inline_asset_content }}
+          </div>
+          <span class="announcement-bar-mini-trust__text">
+            {% if is_rtl %}
+              منتجات أصلية 100%
+            {% else %}
+              100% genuine
+            {% endif %}
+          </span>
+        </div>
+        
+        <div class="announcement-bar-mini-trust__divider"></div>
+        
+        <div class="announcement-bar-mini-trust__item" data-trust-item="support">
+          <div class="announcement-bar-mini-trust__icon" data-icon="support">
+            {{ 'icon-chat-bubble.svg' | inline_asset_content }}
+          </div>
+          <span class="announcement-bar-mini-trust__text">
+            {% if is_rtl %}
+              دعم واتساب
+            {% else %}
+              WhatsApp support
+            {% endif %}
+          </span>
+        </div>
+      </div>
+      
+      <!-- Compressed content for mobile/scrolled state -->
+      <div class="announcement-bar-mini-trust__compressed">
+        <div class="announcement-bar-mini-trust__pill-container" data-pills-container>
+          <div class="announcement-bar-mini-trust__pill" data-pill="shipping">
+            <div class="announcement-bar-mini-trust__icon">
+              {{ 'icon-truck.svg' | inline_asset_content }}
+            </div>
+          </div>
+          <div class="announcement-bar-mini-trust__pill" data-pill="genuine">
+            <div class="announcement-bar-mini-trust__icon">
+              {{ 'icon-checkmark.svg' | inline_asset_content }}
+            </div>
+          </div>
+          <div class="announcement-bar-mini-trust__pill" data-pill="support">
+            <div class="announcement-bar-mini-trust__icon">
+              {{ 'icon-chat-bubble.svg' | inline_asset_content }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  class AnnouncementBarMiniTrust {
+    constructor(element) {
+      this.element = element;
+      this.content = element.querySelector('[data-announcement-content]');
+      this.icons = element.querySelectorAll('[data-icon]');
+      this.isScrolled = false;
+      this.animationDelay = parseInt(element.style.getPropertyValue('--animation-delay')) || 50;
+      
+      this.init();
+    }
+    
+    init() {
+      this.setupScrollListener();
+      this.animateIconsOnLoad();
+      this.setupMobileSwipe();
+    }
+    
+    setupScrollListener() {
+      let ticking = false;
+      
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            this.handleScroll();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+    }
+    
+    handleScroll() {
+      const scrollY = window.scrollY;
+      const shouldCompress = scrollY > 50;
+      
+      if (shouldCompress !== this.isScrolled) {
+        this.isScrolled = shouldCompress;
+        this.element.classList.toggle('announcement-bar-mini-trust--compressed', shouldCompress);
+      }
+    }
+    
+    animateIconsOnLoad() {
+      this.icons.forEach((icon, index) => {
+        setTimeout(() => {
+          icon.style.opacity = '1';
+          icon.style.transform = 'scale(1)';
+        }, index * this.animationDelay);
+      });
+    }
+    
+    setupMobileSwipe() {
+      const pillsContainer = this.element.querySelector('[data-pills-container]');
+      if (!pillsContainer) return;
+      
+      let startX = 0;
+      let currentX = 0;
+      let isDragging = false;
+      
+      pillsContainer.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        isDragging = true;
+      });
+      
+      pillsContainer.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        currentX = e.touches[0].clientX;
+        const diff = currentX - startX;
+        pillsContainer.style.transform = `translateX(${diff}px)`;
+      });
+      
+      pillsContainer.addEventListener('touchend', () => {
+        isDragging = false;
+        pillsContainer.style.transform = '';
+      });
+    }
+  }
+  
+  // Initialize on DOM load
+  document.addEventListener('DOMContentLoaded', () => {
+    const announcementBars = document.querySelectorAll('[data-announcement-bar]');
+    announcementBars.forEach(bar => new AnnouncementBarMiniTrust(bar));
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Announcement Bar + Mini Trust",
+  "class": "announcement-bar-mini-trust-section",
+  "enabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "animation_delay",
+      "min": 25,
+      "max": 100,
+      "step": 25,
+      "unit": "ms",
+      "label": "Animation delay between icons",
+      "default": 50
+    },
+    {
+      "type": "header",
+      "content": "Trust Indicators"
+    },
+    {
+      "type": "paragraph",
+      "content": "This section displays trust indicators with automatic RTL support for Arabic content."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Announcement Bar + Mini Trust"
+    }
+  ]
+}
+{% endschema %}

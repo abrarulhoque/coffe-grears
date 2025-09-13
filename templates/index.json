@@ -92,6 +92,7 @@
         "category_bpxVpd": {
           "type": "category",
           "settings": {
+            "image": "shopify://shop_images/high-angle-jug-with-coffee-scale-coffee-shop.jpg",
             "label": "أكواب",
             "link": ""
           }
@@ -99,6 +100,7 @@
         "category_zDUKkG": {
           "type": "category",
           "settings": {
+            "image": "shopify://shop_images/c_1.png",
             "label": "أدوات الباريستا",
             "link": ""
           }
@@ -106,6 +108,7 @@
         "category_iQBdHG": {
           "type": "category",
           "settings": {
+            "image": "shopify://shop_images/VCF_image_1.jpg",
             "label": "الملحقات",
             "link": ""
           }
@@ -113,6 +116,7 @@
         "category_xcNaPz": {
           "type": "category",
           "settings": {
+            "image": "shopify://shop_images/studio-product-still-life-of-mugs-premium-coffee-tools-aesthetic-soft-side-lighting-matte-backdrop-in-warm-neutral-tones-minimal-composition-photorealistic.png",
             "label": "قطع الغيار",
             "link": ""
           }
@@ -120,6 +124,7 @@
         "category_RQ8ewk": {
           "type": "category",
           "settings": {
+            "image": "shopify://shop_images/studio-product-still-life-of-brewing-devices-premium-coffee-tools-aesthetic-soft-side-lighting-matte-backdrop-in-warm-neutral-tones-minimal-composition-photorealistic.png",
             "label": "وصل حديثًا",
             "link": ""
           }

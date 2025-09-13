@@ -1,0 +1,546 @@
+{{ 'component-slider.css' | asset_url | stylesheet_tag }}
+
+<div class="reviews-social color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width">
+    <div class="reviews-social__content">
+      {%- if section.settings.title != blank -%}
+        <div class="reviews-social__header">
+          <h2 class="reviews-social__title {{ section.settings.heading_size }}">
+            {{ section.settings.title | escape }}
+          </h2>
+          {%- if section.settings.subtitle != blank -%}
+            <p class="reviews-social__subtitle">{{ section.settings.subtitle | escape }}</p>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+
+      <div class="reviews-carousel" data-auto-slide="{{ section.settings.auto_slide }}" data-slide-speed="{{ section.settings.slide_speed }}">
+        <div class="reviews-carousel__track" id="reviewsTrack">
+          {%- for block in section.blocks -%}
+            <div class="review-card" {{ block.shopify_attributes }}>
+              <div class="review-card__content">
+                <div class="review-card__stars">
+                  {%- for i in (1..5) -%}
+                    <span class="star {% if i <= block.settings.rating %}filled{% endif %}">★</span>
+                  {%- endfor -%}
+                </div>
+                <blockquote class="review-card__text">
+                  "{{ block.settings.review_text | escape }}"
+                </blockquote>
+                <div class="review-card__author">
+                  <div class="review-card__avatar">
+                    {%- if block.settings.avatar_image != blank -%}
+                      <img src="{{ block.settings.avatar_image | image_url: width: 40 }}" 
+                           alt="{{ block.settings.customer_name | escape }}"
+                           width="40" height="40">
+                    {%- else -%}
+                      <div class="avatar-placeholder">{{ block.settings.customer_name | slice: 0 }}</div>
+                    {%- endif -%}
+                  </div>
+                  <span class="review-card__name">– {{ block.settings.customer_name | escape }}</span>
+                </div>
+              </div>
+            </div>
+          {%- endfor -%}
+        </div>
+        
+        {%- if section.blocks.size > 1 -%}
+          <div class="reviews-carousel__controls">
+            <button class="carousel-btn carousel-btn--prev" aria-label="Previous review">‹</button>
+            <div class="carousel-dots">
+              {%- for block in section.blocks -%}
+                <button class="carousel-dot {% if forloop.first %}active{% endif %}" data-slide="{{ forloop.index0 }}"></button>
+              {%- endfor -%}
+            </div>
+            <button class="carousel-btn carousel-btn--next" aria-label="Next review">›</button>
+          </div>
+        {%- endif -%}
+      </div>
+
+      {%- if section.settings.all_reviews_link != blank and section.settings.all_reviews_text != blank -%}
+        <div class="reviews-social__footer">
+          <a href="{{ section.settings.all_reviews_link }}" class="reviews-social__link">
+            {{ section.settings.all_reviews_text | escape }}
+          </a>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+<style>
+  .reviews-social {
+    padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
+  }
+
+  .reviews-social__content {
+    text-align: center;
+  }
+
+  .reviews-social__header {
+    margin-bottom: 2rem;
+  }
+
+  .reviews-social__title {
+    margin: 0 0 0.5rem;
+  }
+
+  .reviews-social__subtitle {
+    margin: 0;
+    color: rgba(var(--color-foreground), 0.7);
+  }
+
+  .reviews-carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .reviews-carousel__track {
+    display: flex;
+    transition: transform 0.5s ease;
+    overflow: hidden;
+  }
+
+  .review-card {
+    min-width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+
+  .review-card__content {
+    background: rgba(var(--color-foreground), 0.04);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 600px;
+  }
+
+  .review-card__stars {
+    margin-bottom: 1rem;
+  }
+
+  .star {
+    color: #ddd;
+    font-size: 1.2rem;
+    margin: 0 0.1rem;
+  }
+
+  .star.filled {
+    color: #ffc107;
+  }
+
+  .review-card__text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0 0 1.5rem;
+    font-style: italic;
+    direction: rtl;
+    text-align: right;
+  }
+
+  .review-card__author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+
+  .review-card__avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: rgba(var(--color-foreground), 0.1);
+  }
+
+  .review-card__avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .avatar-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  .review-card__name {
+    font-weight: 500;
+    color: rgba(var(--color-foreground), 0.8);
+  }
+
+  .reviews-carousel__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .carousel-btn {
+    background: rgba(var(--color-foreground), 0.1);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .carousel-btn:hover {
+    background: rgba(var(--color-foreground), 0.2);
+    transform: scale(1.05);
+  }
+
+  .carousel-dots {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .carousel-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(var(--color-foreground), 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .carousel-dot.active {
+    background: rgba(var(--color-foreground), 0.8);
+    transform: scale(1.2);
+  }
+
+  .reviews-social__footer {
+    margin-top: 2rem;
+  }
+
+  .reviews-social__link {
+    color: rgb(var(--color-link));
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+  }
+
+  .reviews-social__link:hover {
+    border-bottom-color: rgb(var(--color-link));
+  }
+
+  @media screen and (max-width: 749px) {
+    .review-card__content {
+      padding: 1.5rem;
+    }
+    
+    .review-card__text {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<script>
+  class ReviewsCarousel {
+    constructor(element) {
+      this.carousel = element;
+      this.track = this.carousel.querySelector('.reviews-carousel__track');
+      this.slides = this.carousel.querySelectorAll('.review-card');
+      this.dots = this.carousel.querySelectorAll('.carousel-dot');
+      this.prevBtn = this.carousel.querySelector('.carousel-btn--prev');
+      this.nextBtn = this.carousel.querySelector('.carousel-btn--next');
+      
+      this.currentSlide = 0;
+      this.totalSlides = this.slides.length;
+      this.autoSlide = this.carousel.dataset.autoSlide === 'true';
+      this.slideSpeed = parseInt(this.carousel.dataset.slideSpeed) * 1000 || 6000;
+      this.autoSlideInterval = null;
+      
+      this.init();
+    }
+    
+    init() {
+      if (this.totalSlides <= 1) return;
+      
+      this.bindEvents();
+      if (this.autoSlide) {
+        this.startAutoSlide();
+      }
+    }
+    
+    bindEvents() {
+      if (this.prevBtn) {
+        this.prevBtn.addEventListener('click', () => this.prevSlide());
+      }
+      
+      if (this.nextBtn) {
+        this.nextBtn.addEventListener('click', () => this.nextSlide());
+      }
+      
+      this.dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => this.goToSlide(index));
+      });
+      
+      if (this.autoSlide) {
+        this.carousel.addEventListener('mouseenter', () => this.pauseAutoSlide());
+        this.carousel.addEventListener('mouseleave', () => this.startAutoSlide());
+      }
+    }
+    
+    goToSlide(index) {
+      this.currentSlide = index;
+      this.updateCarousel();
+    }
+    
+    nextSlide() {
+      this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
+      this.updateCarousel();
+    }
+    
+    prevSlide() {
+      this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+      this.updateCarousel();
+    }
+    
+    updateCarousel() {
+      const translateX = -this.currentSlide * 100;
+      this.track.style.transform = `translateX(${translateX}%)`;
+      
+      this.dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === this.currentSlide);
+      });
+    }
+    
+    startAutoSlide() {
+      if (!this.autoSlide || this.totalSlides <= 1) return;
+      
+      this.pauseAutoSlide();
+      this.autoSlideInterval = setInterval(() => {
+        this.nextSlide();
+      }, this.slideSpeed);
+    }
+    
+    pauseAutoSlide() {
+      if (this.autoSlideInterval) {
+        clearInterval(this.autoSlideInterval);
+        this.autoSlideInterval = null;
+      }
+    }
+  }
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    const carousels = document.querySelectorAll('.reviews-carousel');
+    carousels.forEach(carousel => new ReviewsCarousel(carousel));
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Reviews Social",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "default": "آراء عملائنا",
+      "label": "t:sections.rich-text.settings.heading.label"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "auto_slide",
+      "default": true,
+      "label": "Auto-slide reviews"
+    },
+    {
+      "type": "range",
+      "id": "slide_speed",
+      "min": 3,
+      "max": 10,
+      "step": 1,
+      "unit": "s",
+      "label": "Auto-slide speed",
+      "default": 6
+    },
+    {
+      "type": "text",
+      "id": "all_reviews_text",
+      "default": "اقرأ جميع المراجعات",
+      "label": "All reviews link text"
+    },
+    {
+      "type": "url",
+      "id": "all_reviews_link",
+      "label": "All reviews link"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "t:sections.all.colors.accent_1.label"
+        },
+        {
+          "value": "accent-2",
+          "label": "t:sections.all.colors.accent_2.label"
+        },
+        {
+          "value": "background-1",
+          "label": "t:sections.all.colors.background_1.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.all.colors.background_2.label"
+        },
+        {
+          "value": "inverse",
+          "label": "t:sections.all.colors.inverse.label"
+        }
+      ],
+      "default": "background-1",
+      "label": "t:sections.all.colors.label"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "review_text",
+          "default": "التوصيل سريع والمطحنة أصلية",
+          "label": "Review text"
+        },
+        {
+          "type": "text",
+          "id": "customer_name",
+          "default": "عبدالله",
+          "label": "Customer name"
+        },
+        {
+          "type": "range",
+          "id": "rating",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "label": "Star rating",
+          "default": 5
+        },
+        {
+          "type": "image_picker",
+          "id": "avatar_image",
+          "label": "Customer avatar (optional)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Reviews Social",
+      "blocks": [
+        {
+          "type": "review",
+          "settings": {
+            "review_text": "التوصيل سريع والمطحنة أصلية",
+            "customer_name": "عبدالله",
+            "rating": 5
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "review_text": "جودة ممتازة وخدمة عملاء رائعة",
+            "customer_name": "فاطمة",
+            "rating": 5
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "review_text": "أفضل متجر لأدوات القهوة في الكويت",
+            "customer_name": "محمد",
+            "rating": 5
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "review_text": "منتجات أصلية بأسعار معقولة",
+            "customer_name": "نورا",
+            "rating": 5
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "review_text": "تسليم سريع وتعامل محترف",
+            "customer_name": "أحمد",
+            "rating": 5
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

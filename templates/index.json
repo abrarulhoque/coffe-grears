@@ -151,18 +151,6 @@
     },
     "rich_text": {
       "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "heading"
-      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -170,6 +158,62 @@
         "full_width": true,
         "padding_top": 28,
         "padding_bottom": 12
+      }
+    },
+    "brewing_method_Lrhnkg": {
+      "type": "brewing-method",
+      "blocks": {
+        "brewing_method_xgRWwK": {
+          "type": "brewing_method",
+          "settings": {
+            "image": "shopify://shop_images/9171e155-f238-4672-8e1d-787f508116bc_13722842.jpg",
+            "method_name": "V60",
+            "description": "Clean, bright flavors",
+            "link": ""
+          }
+        },
+        "brewing_method_aiyJzt": {
+          "type": "brewing_method",
+          "settings": {
+            "image": "shopify://shop_images/Generated_Image_September_13_2025_-_11_06AM_1.png",
+            "method_name": "Espresso",
+            "description": "Rich, concentrated",
+            "link": ""
+          }
+        },
+        "brewing_method_awj7pk": {
+          "type": "brewing_method",
+          "settings": {
+            "image": "shopify://shop_images/top-down-flat-lay-of-four-brewing-methods-v60-dripper-espresso-portafilter-french-press-moka-pot-arranged-neatly-warm-natural-light-minimal-photorealistic.png",
+            "method_name": "French Press",
+            "description": "Full-bodied, simple",
+            "link": ""
+          }
+        },
+        "brewing_method_fwmDwU": {
+          "type": "brewing_method",
+          "settings": {
+            "image": "shopify://shop_images/Generated_Image_September_13_2025_-_11_06AM_1.png",
+            "method_name": "Moka",
+            "description": "Bold, stovetop classic",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "brewing_method_xgRWwK",
+        "brewing_method_aiyJzt",
+        "brewing_method_awj7pk",
+        "brewing_method_fwmDwU"
+      ],
+      "name": "Brewing Method",
+      "settings": {
+        "title": "Shop by Brewing Method",
+        "subtitle": "Help beginners choose",
+        "heading_size": "h1",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "collection_list_pQRhEJ": {
@@ -254,6 +298,7 @@
     "slideshow_9KWh8y",
     "category_grid_JMXEdj",
     "rich_text",
+    "brewing_method_Lrhnkg",
     "collection_list_pQRhEJ",
     "featured-collection"
   ]

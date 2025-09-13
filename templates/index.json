@@ -1,1 +1,222 @@
-{"sections":{"image_banner_CFp7TD":{"type":"image-banner","blocks":{"heading_fJWEc8":{"type":"heading","settings":{"heading":"","heading_size":"h1"}},"text_7dNhtR":{"type":"text","settings":{"text":"","text_style":"body"}},"buttons_QQnhcG":{"type":"buttons","settings":{"button_label_1":"Shop Now | تسوق الآن","button_link_1":"shopify:\/\/collections\/all","button_style_secondary_1":true,"button_label_2":"Contact us | تواصل معنا","button_link_2":"shopify:\/\/pages\/contact","button_style_secondary_2":true}}},"block_order":["heading_fJWEc8","text_7dNhtR","buttons_QQnhcG"],"name":"t:sections.image-banner.presets.name","settings":{"image":"shopify:\/\/shop_images\/Coffee_Gears_Hero_Banner.jpg","image_overlay_opacity":0,"image_height":"adapt","image_behavior":"none","desktop_content_position":"bottom-left","desktop_content_alignment":"center","show_text_box":false,"color_scheme":"","stack_images_on_mobile":true,"mobile_content_alignment":"center","show_text_below":true}},"slideshow_9KWh8y":{"type":"slideshow","blocks":{"slide_myq9f9":{"type":"slide","settings":{"image":"shopify:\/\/shop_images\/Coffee_Gears_Hero_Banner.jpg","image_overlay_opacity":0,"heading":"","heading_size":"h1","subheading":"","button_label":"Shop Now | تسوق الآن","link":"shopify:\/\/collections\/all","button_style_secondary":true,"show_text_box":false,"box_align":"bottom-left","text_alignment":"center","text_alignment_mobile":"center","color_scheme":""}}},"block_order":["slide_myq9f9"],"disabled":true,"name":"t:sections.slideshow.presets.name","settings":{"layout":"full_bleed","slide_height":"adapt_image","slider_visual":"dots","auto_rotate":false,"change_slides_speed":5,"image_behavior":"none","show_text_below":true,"accessibility_info":"Slideshow about Coffee Gears"}},"rich_text":{"type":"rich-text","blocks":{"heading":{"type":"heading","settings":{"heading":"Browse our latest products","heading_size":"h1"}}},"block_order":["heading"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"scheme-1","full_width":true,"padding_top":28,"padding_bottom":12}},"collection_list_pQRhEJ":{"type":"collection-list","blocks":{"featured_collection_8nXirx":{"type":"featured_collection","settings":{"collection":"brewing-gears"}},"featured_collection_UYRVhg":{"type":"featured_collection","settings":{"collection":"barista-tools"}},"featured_collection_HVnRm3":{"type":"featured_collection","settings":{"collection":""}},"featured_collection_QkqeLK":{"type":"featured_collection","settings":{"collection":""}}},"block_order":["featured_collection_8nXirx","featured_collection_UYRVhg","featured_collection_HVnRm3","featured_collection_QkqeLK"],"name":"t:sections.collection-list.presets.name","settings":{"title":"Collections","heading_size":"h1","image_ratio":"square","columns_desktop":5,"color_scheme":"","show_view_all":true,"columns_mobile":"2","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}},"featured-collection":{"type":"featured-collection","settings":{"collection":"all","products_to_show":5,"title":"","heading_size":"h2","description":"","show_description":false,"description_style":"body","columns_desktop":5,"enable_desktop_slider":false,"full_width":true,"show_view_all":true,"view_all_style":"outline","color_scheme":"scheme-1","image_ratio":"square","image_shape":"default","show_secondary_image":true,"show_vendor":true,"show_rating":false,"quick_add":"standard","columns_mobile":"2","swipe_on_mobile":false,"padding_top":8,"padding_bottom":68}}},"order":["image_banner_CFp7TD","slideshow_9KWh8y","rich_text","collection_list_pQRhEJ","featured-collection"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "value_hero_pRJUFL": {
+      "type": "value-hero",
+      "name": "Value Hero",
+      "settings": {
+        "image": "shopify://shop_images/modern-kuwaiti-kitchen-counter-at-sunrise-elegant-pour-over-setup-hario-v60-gooseneck-kettle-light-steam-warm-natural-light-minimal-props-premium-editorial-photo-3-1-aspect-depth-of-f.png",
+        "image_overlay_opacity": 20,
+        "image_height": "large",
+        "heading": "أدوات قهوة مميزة — مختارة بعناية",
+        "subheading": "معدات أصلية، شحن سريع، دعم من عشّاق القهوة مثلك.",
+        "button_label_1": "تسوق الآن",
+        "button_link_1": "",
+        "button_label_2": "تسوق حسب الفئة",
+        "button_link_2": ""
+      }
+    },
+    "image_banner_CFp7TD": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_fJWEc8": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_7dNhtR": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "body"
+          }
+        },
+        "buttons_QQnhcG": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Now | تسوق الآن",
+            "button_link_1": "shopify://collections/all",
+            "button_style_secondary_1": true,
+            "button_label_2": "Contact us | تواصل معنا",
+            "button_link_2": "shopify://pages/contact",
+            "button_style_secondary_2": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_fJWEc8",
+        "text_7dNhtR",
+        "buttons_QQnhcG"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Coffee_Gears_Hero_Banner.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "image_behavior": "none",
+        "desktop_content_position": "bottom-left",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "slideshow_9KWh8y": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_myq9f9": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Coffee_Gears_Hero_Banner.jpg",
+            "image_overlay_opacity": 0,
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "Shop Now | تسوق الآن",
+            "link": "shopify://collections/all",
+            "button_style_secondary": true,
+            "show_text_box": false,
+            "box_align": "bottom-left",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_myq9f9"
+      ],
+      "disabled": true,
+      "name": "t:sections.slideshow.presets.name",
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "dots",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about Coffee Gears"
+      }
+    },
+    "rich_text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Browse our latest products",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 28,
+        "padding_bottom": 12
+      }
+    },
+    "collection_list_pQRhEJ": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_8nXirx": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "brewing-gears"
+          }
+        },
+        "featured_collection_UYRVhg": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "barista-tools"
+          }
+        },
+        "featured_collection_HVnRm3": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_QkqeLK": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_8nXirx",
+        "featured_collection_UYRVhg",
+        "featured_collection_HVnRm3",
+        "featured_collection_QkqeLK"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "Collections",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 5,
+        "color_scheme": "",
+        "show_view_all": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "all",
+        "products_to_show": 5,
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 5,
+        "enable_desktop_slider": false,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_style": "outline",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 8,
+        "padding_bottom": 68
+      }
+    }
+  },
+  "order": [
+    "value_hero_pRJUFL",
+    "image_banner_CFp7TD",
+    "slideshow_9KWh8y",
+    "rich_text",
+    "collection_list_pQRhEJ",
+    "featured-collection"
+  ]
+}

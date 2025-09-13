@@ -262,6 +262,71 @@
         "padding_bottom": 36
       }
     },
+    "reviews_social_MiJ8R3": {
+      "type": "reviews-social",
+      "blocks": {
+        "review_KQCAGV": {
+          "type": "review",
+          "settings": {
+            "review_text": "التوصيل سريع والمطحنة أصلية",
+            "customer_name": "عبدالله",
+            "rating": 5
+          }
+        },
+        "review_D7FkzK": {
+          "type": "review",
+          "settings": {
+            "review_text": "جودة ممتازة وخدمة عملاء رائعة",
+            "customer_name": "فاطمة",
+            "rating": 5
+          }
+        },
+        "review_PXCAge": {
+          "type": "review",
+          "settings": {
+            "review_text": "أفضل متجر لأدوات القهوة في الكويت",
+            "customer_name": "محمد",
+            "rating": 5
+          }
+        },
+        "review_88k4WG": {
+          "type": "review",
+          "settings": {
+            "review_text": "منتجات أصلية بأسعار معقولة",
+            "customer_name": "نورا",
+            "rating": 5
+          }
+        },
+        "review_NiqELm": {
+          "type": "review",
+          "settings": {
+            "review_text": "تسليم سريع وتعامل محترف",
+            "customer_name": "أحمد",
+            "rating": 5
+          }
+        }
+      },
+      "block_order": [
+        "review_KQCAGV",
+        "review_D7FkzK",
+        "review_PXCAge",
+        "review_88k4WG",
+        "review_NiqELm"
+      ],
+      "name": "Reviews Social",
+      "settings": {
+        "title": "آراء عملائنا",
+        "subtitle": "",
+        "heading_size": "h1",
+        "auto_slide": true,
+        "slide_speed": 6,
+        "all_reviews_text": "اقرأ جميع المراجعات",
+        "all_reviews_link": "",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "collection_list_pQRhEJ": {
       "type": "collection-list",
       "blocks": {
@@ -346,6 +411,7 @@
     "rich_text",
     "brewing_method_Lrhnkg",
     "education_guides_Ud6Exz",
+    "reviews_social_MiJ8R3",
     "collection_list_pQRhEJ",
     "featured-collection"
   ]

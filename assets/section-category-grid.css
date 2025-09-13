@@ -6,7 +6,6 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  gap: 2rem;
 }
 
 .category-grid__item {
@@ -187,10 +186,6 @@
     margin-top: 3rem;
   }
 
-  .category-grid__list {
-    gap: 1.5rem;
-  }
-
   .category-card__overlay {
     padding: 1.5rem;
   }
@@ -212,10 +207,6 @@
 }
 
 @media screen and (max-width: 549px) {
-  .category-grid__list {
-    gap: 1rem;
-  }
-
   .category-card__overlay {
     padding: 1rem;
   }
@@ -236,16 +227,6 @@
   }
 }
 
-/* Grid Layout Improvements for RTL */
-@media screen and (min-width: 750px) {
-  [dir="rtl"] .category-grid__list.grid--4-col-desktop {
-    grid-template-columns: repeat(4, 1fr);
-  }
-  
-  [dir="rtl"] .category-grid__list.grid--2-col-tablet-down {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
 /* Animation Enhancements */
 .category-card {

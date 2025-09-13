@@ -327,60 +327,12 @@
         "padding_bottom": 36
       }
     },
-    "collection_list_pQRhEJ": {
-      "type": "collection-list",
-      "blocks": {
-        "featured_collection_8nXirx": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "brewing-gears"
-          }
-        },
-        "featured_collection_UYRVhg": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "barista-tools"
-          }
-        },
-        "featured_collection_HVnRm3": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "featured_collection_QkqeLK": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_8nXirx",
-        "featured_collection_UYRVhg",
-        "featured_collection_HVnRm3",
-        "featured_collection_QkqeLK"
-      ],
-      "name": "t:sections.collection-list.presets.name",
-      "settings": {
-        "title": "Collections",
-        "heading_size": "h1",
-        "image_ratio": "square",
-        "columns_desktop": 5,
-        "color_scheme": "",
-        "show_view_all": true,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "featured-collection": {
       "type": "featured-collection",
       "settings": {
         "collection": "all",
         "products_to_show": 5,
-        "title": "",
+        "title": "Featured Products",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
@@ -412,7 +364,6 @@
     "brewing_method_Lrhnkg",
     "education_guides_Ud6Exz",
     "reviews_social_MiJ8R3",
-    "collection_list_pQRhEJ",
     "featured-collection"
   ]
 }

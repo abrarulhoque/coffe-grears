@@ -1,0 +1,401 @@
+.brewing-method {
+  margin-top: 3rem;
+}
+
+.brewing-method__subtitle {
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  color: rgba(var(--color-foreground), 0.75);
+  text-align: center;
+}
+
+.brewing-method__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.brewing-method__item {
+  position: relative;
+  display: flex;
+}
+
+/* RTL Support */
+[dir="rtl"] .brewing-method__list {
+  direction: rtl;
+}
+
+[dir="rtl"] .brewing-method__item {
+  direction: ltr;
+}
+
+/* Brewing Card */
+.brewing-card {
+  position: relative;
+  width: 100%;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: 2px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(45deg, transparent, transparent) border-box;
+}
+
+/* Micro-animation: Border animation on hover */
+.brewing-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, 
+    #8B5A2B, #D2691E, #F4A460, #DEB887, 
+    #CD853F, #A0522D, #8B5A2B);
+  background-size: 400% 400%;
+  border-radius: 1.2rem;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.brewing-card:hover::before {
+  opacity: 1;
+}
+
+.brewing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(139, 90, 43, 0.15);
+}
+
+.brewing-card__image-wrapper {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.brewing-card__image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.brewing-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.brewing-card__image--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(var(--color-foreground), 0.04);
+}
+
+.brewing-card__image--placeholder .placeholder-svg {
+  width: 50%;
+  height: 50%;
+  opacity: 0.3;
+}
+
+/* Overlay */
+.brewing-card__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(139, 90, 43, 0.4) 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  padding: 2.4rem;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* RTL Overlay positioning */
+[dir="rtl"] .brewing-card__overlay {
+  direction: rtl;
+}
+
+.brewing-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+  direction: inherit;
+  transform: translateY(10px);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.brewing-card__title {
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  letter-spacing: -0.02em;
+}
+
+.brewing-card__description {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 0;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* CTA Button */
+.brewing-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.4rem;
+  padding: 1rem 1.6rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 3rem;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  width: fit-content;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* RTL CTA Button */
+[dir="rtl"] .brewing-card__link {
+  flex-direction: row-reverse;
+}
+
+.brewing-card__cta {
+  white-space: nowrap;
+}
+
+.brewing-card__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.brewing-card__arrow svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+/* RTL Arrow */
+[dir="rtl"] .brewing-card__arrow svg {
+  transform: scaleX(-1);
+}
+
+/* Hover Effects */
+.brewing-card:hover .brewing-card__img {
+  transform: scale(1.08) rotate(1deg);
+}
+
+.brewing-card:hover .brewing-card__overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(139, 90, 43, 0.6) 100%
+  );
+}
+
+.brewing-card:hover .brewing-card__content {
+  transform: translateY(0);
+}
+
+.brewing-card:hover .brewing-card__description {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+
+.brewing-card:hover .brewing-card__link {
+  opacity: 1;
+  transform: translateY(0);
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.4);
+  transition-delay: 0.2s;
+}
+
+.brewing-card:hover .brewing-card__arrow {
+  transform: translateX(6px);
+}
+
+/* RTL Hover Arrow */
+[dir="rtl"] .brewing-card:hover .brewing-card__arrow {
+  transform: translateX(-6px);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 749px) {
+  .brewing-method {
+    margin-top: 2rem;
+  }
+
+  .brewing-method__subtitle {
+    font-size: 1.4rem;
+  }
+
+  .brewing-card {
+    border-radius: 1rem;
+  }
+
+  .brewing-card::before {
+    border-radius: 1rem;
+  }
+
+  .brewing-card__overlay {
+    padding: 2rem;
+  }
+
+  .brewing-card__title {
+    font-size: 1.8rem;
+  }
+
+  .brewing-card__description {
+    font-size: 1.3rem;
+  }
+
+  .brewing-card__link {
+    font-size: 1.3rem;
+    padding: 0.8rem 1.4rem;
+    gap: 0.8rem;
+  }
+
+  .brewing-card__arrow {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 549px) {
+  .brewing-card__overlay {
+    padding: 1.6rem;
+  }
+
+  .brewing-card__title {
+    font-size: 1.6rem;
+  }
+
+  .brewing-card__description {
+    font-size: 1.2rem;
+  }
+
+  .brewing-card__link {
+    font-size: 1.2rem;
+    padding: 0.7rem 1.2rem;
+    gap: 0.6rem;
+  }
+
+  .brewing-card__arrow {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+}
+
+/* Performance optimizations */
+.brewing-card {
+  will-change: transform, box-shadow;
+}
+
+.brewing-card__img {
+  will-change: transform;
+}
+
+.brewing-card__arrow {
+  will-change: transform;
+}
+
+.brewing-card__content {
+  will-change: transform;
+}
+
+.brewing-card__description,
+.brewing-card__link {
+  will-change: opacity, transform;
+}
+
+/* Focus States for Accessibility */
+.brewing-card__link:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.8);
+  outline-offset: 3px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.brewing-card:focus-within .brewing-card__img {
+  transform: scale(1.08) rotate(1deg);
+}
+
+.brewing-card:focus-within .brewing-card__overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(139, 90, 43, 0.6) 100%
+  );
+}
+
+.brewing-card:focus-within .brewing-card__description {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animation delays for staggered reveals */
+.brewing-method__item:nth-child(1) .brewing-card__description {
+  transition-delay: 0.1s;
+}
+
+.brewing-method__item:nth-child(1) .brewing-card__link {
+  transition-delay: 0.2s;
+}
+
+.brewing-method__item:nth-child(2) .brewing-card__description {
+  transition-delay: 0.15s;
+}
+
+.brewing-method__item:nth-child(2) .brewing-card__link {
+  transition-delay: 0.25s;
+}
+
+.brewing-method__item:nth-child(3) .brewing-card__description {
+  transition-delay: 0.2s;
+}
+
+.brewing-method__item:nth-child(3) .brewing-card__link {
+  transition-delay: 0.3s;
+}
+
+.brewing-method__item:nth-child(4) .brewing-card__description {
+  transition-delay: 0.25s;
+}
+
+.brewing-method__item:nth-child(4) .brewing-card__link {
+  transition-delay: 0.35s;
+}

@@ -1,0 +1,238 @@
+{{ 'section-brewing-method.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    {%- unless section.settings.title == blank -%}
+      <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin">
+        <h2 class="title inline-richtext {{ section.settings.heading_size }}">
+          {{ section.settings.title }}
+        </h2>
+        {%- unless section.settings.subtitle == blank -%}
+          <p class="brewing-method__subtitle">{{ section.settings.subtitle }}</p>
+        {%- endunless -%}
+      </div>
+    {%- endunless -%}
+
+    <div class="brewing-method">
+      <ul class="brewing-method__list grid grid--2-col-tablet-down grid--4-col-desktop" role="list">
+        {%- for block in section.blocks -%}
+          <li
+            id="BrewingMethod-{{ section.id }}-{{ forloop.index }}"
+            class="brewing-method__item grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {{ block.shopify_attributes }}
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: {{ forloop.index }};"
+            {% endif %}
+          >
+            <div class="brewing-card">
+              <div class="brewing-card__image-wrapper">
+                {%- if block.settings.image != blank -%}
+                  <div class="brewing-card__image">
+                    {{
+                      block.settings.image
+                      | image_url: width: 800
+                      | image_tag:
+                        loading: 'lazy',
+                        class: 'brewing-card__img',
+                        sizes: '(min-width: 990px) 25vw, (min-width: 750px) 50vw, 100vw',
+                        widths: '165, 360, 535, 750, 1070, 1500'
+                    }}
+                  </div>
+                {%- else -%}
+                  <div class="brewing-card__image brewing-card__image--placeholder">
+                    {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                  </div>
+                {%- endif -%}
+                
+                <div class="brewing-card__overlay">
+                  <div class="brewing-card__content">
+                    {%- if block.settings.method_name != blank -%}
+                      <h3 class="brewing-card__title">{{ block.settings.method_name }}</h3>
+                    {%- endif -%}
+                    
+                    {%- if block.settings.description != blank -%}
+                      <p class="brewing-card__description">{{ block.settings.description }}</p>
+                    {%- endif -%}
+                    
+                    {%- if block.settings.link != blank -%}
+                      <a href="{{ block.settings.link }}" class="brewing-card__link">
+                        <span class="brewing-card__cta">تسوق الطريقة</span>
+                        <span class="brewing-card__arrow">
+                          {{ 'icon-arrow.svg' | inline_asset_content }}
+                        </span>
+                      </a>
+                    {%- endif -%}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Brewing Method",
+  "tag": "section",
+  "class": "section section-brewing-method",
+  "max_blocks": 4,
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "default": "Shop by Brewing Method",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "default": "Help beginners choose",
+      "label": "Subtitle"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "Small"
+        },
+        {
+          "value": "h1",
+          "label": "Medium"
+        },
+        {
+          "value": "h0",
+          "label": "Large"
+        },
+        {
+          "value": "hxl",
+          "label": "Extra large"
+        },
+        {
+          "value": "hxxl",
+          "label": "XX-Large"
+        }
+      ],
+      "default": "h1",
+      "label": "Heading size"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "brewing_method",
+      "name": "Brewing Method",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "method_name",
+          "default": "V60",
+          "label": "Method Name"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "default": "Perfect for beginners",
+          "label": "Short Description"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Shop Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Brewing Method",
+      "blocks": [
+        {
+          "type": "brewing_method",
+          "settings": {
+            "method_name": "V60",
+            "description": "Clean, bright flavors"
+          }
+        },
+        {
+          "type": "brewing_method",
+          "settings": {
+            "method_name": "Espresso",
+            "description": "Rich, concentrated"
+          }
+        },
+        {
+          "type": "brewing_method",
+          "settings": {
+            "method_name": "French Press",
+            "description": "Full-bodied, simple"
+          }
+        },
+        {
+          "type": "brewing_method",
+          "settings": {
+            "method_name": "Moka",
+            "description": "Bold, stovetop classic"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

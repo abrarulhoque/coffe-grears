@@ -40,38 +40,6 @@
         "enable_language_selector": false
       }
     },
-    "announcement_bar_mini_trust_ayTXYm": {
-      "type": "announcement-bar-mini-trust",
-      "blocks": {
-        "trust_item_PncKCH": {
-          "type": "trust_item",
-          "settings": {
-            "show_item": true,
-            "icon": "checkmark",
-            "text_en": "100% Authentic",
-            "text_ar": "نص مؤشر الثقة"
-          }
-        },
-        "trust_item_iVMnCn": {
-          "type": "trust_item",
-          "settings": {
-            "show_item": true,
-            "icon": "truck",
-            "text_en": "Free Shipping",
-            "text_ar": "نص مؤشر الثقة"
-          }
-        }
-      },
-      "block_order": [
-        "trust_item_PncKCH",
-        "trust_item_iVMnCn"
-      ],
-      "name": "Announcement + Trust",
-      "settings": {
-        "color_scheme": "",
-        "animation_delay": 50
-      }
-    },
     "header": {
       "type": "header",
       "settings": {
@@ -95,7 +63,6 @@
   "order": [
     "17550506572bbbcbec",
     "announcement-bar",
-    "announcement_bar_mini_trust_ayTXYm",
     "header"
   ]
 }

@@ -51,10 +51,20 @@
             "text_en": "100% Authentic",
             "text_ar": "نص مؤشر الثقة"
           }
+        },
+        "trust_item_iVMnCn": {
+          "type": "trust_item",
+          "settings": {
+            "show_item": true,
+            "icon": "truck",
+            "text_en": "Free Shipping",
+            "text_ar": "نص مؤشر الثقة"
+          }
         }
       },
       "block_order": [
-        "trust_item_PncKCH"
+        "trust_item_PncKCH",
+        "trust_item_iVMnCn"
       ],
       "name": "Announcement + Trust",
       "settings": {

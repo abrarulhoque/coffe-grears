@@ -42,6 +42,20 @@
     },
     "announcement_bar_mini_trust_ayTXYm": {
       "type": "announcement-bar-mini-trust",
+      "blocks": {
+        "trust_item_PncKCH": {
+          "type": "trust_item",
+          "settings": {
+            "show_item": true,
+            "icon": "checkmark",
+            "text_en": "Trust indicator text",
+            "text_ar": "نص مؤشر الثقة"
+          }
+        }
+      },
+      "block_order": [
+        "trust_item_PncKCH"
+      ],
       "name": "Announcement + Trust",
       "settings": {
         "color_scheme": "",

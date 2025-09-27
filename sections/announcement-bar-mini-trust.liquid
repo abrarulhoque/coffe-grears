@@ -1,9 +1,6 @@
 {{ 'section-announcement-bar-mini-trust.css' | asset_url | stylesheet_tag }}
 
 {%- liquid
-  assign announcement_text_ar = "شحن مجاني للطلبات فوق 20 د.ك | منتجات أصلية 100% | دعم واتساب"
-  assign announcement_text_en = "Free shipping over 20 KWD | 100% genuine | WhatsApp support"
-  
   assign current_locale = request.locale.iso_code
   assign is_rtl = false
   if current_locale == 'ar'
@@ -21,68 +18,77 @@
       
       <!-- Full content for desktop -->
       <div class="announcement-bar-mini-trust__full">
-        <div class="announcement-bar-mini-trust__item" data-trust-item="shipping">
-          <div class="announcement-bar-mini-trust__icon" data-icon="shipping">
-            {{ 'icon-truck.svg' | inline_asset_content }}
-          </div>
-          <span class="announcement-bar-mini-trust__text">
-            {% if is_rtl %}
-              شحن مجاني للطلبات فوق 20 د.ك
-            {% else %}
-              Free shipping over 20 KWD
-            {% endif %}
-          </span>
-        </div>
-        
-        <div class="announcement-bar-mini-trust__divider"></div>
-        
-        <div class="announcement-bar-mini-trust__item" data-trust-item="genuine">
-          <div class="announcement-bar-mini-trust__icon" data-icon="genuine">
-            {{ 'icon-checkmark.svg' | inline_asset_content }}
-          </div>
-          <span class="announcement-bar-mini-trust__text">
-            {% if is_rtl %}
-              منتجات أصلية 100%
-            {% else %}
-              100% genuine
-            {% endif %}
-          </span>
-        </div>
-        
-        <div class="announcement-bar-mini-trust__divider"></div>
-        
-        <div class="announcement-bar-mini-trust__item" data-trust-item="support">
-          <div class="announcement-bar-mini-trust__icon" data-icon="support">
-            {{ 'icon-chat-bubble.svg' | inline_asset_content }}
-          </div>
-          <span class="announcement-bar-mini-trust__text">
-            {% if is_rtl %}
-              دعم واتساب
-            {% else %}
-              WhatsApp support
-            {% endif %}
-          </span>
-        </div>
+        {%- for block in section.blocks -%}
+          {%- if block.settings.show_item -%}
+            <div class="announcement-bar-mini-trust__item" data-trust-item="{{ block.id }}" {{ block.shopify_attributes }}>
+              <div class="announcement-bar-mini-trust__icon" data-icon="{{ block.id }}">
+                {%- case block.settings.icon -%}
+                  {%- when 'truck' -%}
+                    {{ 'icon-truck.svg' | inline_asset_content }}
+                  {%- when 'checkmark' -%}
+                    {{ 'icon-checkmark.svg' | inline_asset_content }}
+                  {%- when 'chat' -%}
+                    {{ 'icon-chat-bubble.svg' | inline_asset_content }}
+                  {%- when 'shield' -%}
+                    {{ 'icon-shield.svg' | inline_asset_content }}
+                  {%- when 'heart' -%}
+                    {{ 'icon-heart.svg' | inline_asset_content }}
+                  {%- when 'star' -%}
+                    {{ 'icon-star.svg' | inline_asset_content }}
+                  {%- when 'phone' -%}
+                    {{ 'icon-phone.svg' | inline_asset_content }}
+                  {%- when 'email' -%}
+                    {{ 'icon-email.svg' | inline_asset_content }}
+                  {%- else -%}
+                    {{ 'icon-checkmark.svg' | inline_asset_content }}
+                {%- endcase -%}
+              </div>
+              <span class="announcement-bar-mini-trust__text">
+                {% if is_rtl and block.settings.text_ar != blank %}
+                  {{ block.settings.text_ar }}
+                {% elsif block.settings.text_en != blank %}
+                  {{ block.settings.text_en }}
+                {% endif %}
+              </span>
+            </div>
+            {%- unless forloop.last -%}
+              <div class="announcement-bar-mini-trust__divider"></div>
+            {%- endunless -%}
+          {%- endif -%}
+        {%- endfor -%}
       </div>
       
       <!-- Compressed content for mobile/scrolled state -->
       <div class="announcement-bar-mini-trust__compressed">
         <div class="announcement-bar-mini-trust__pill-container" data-pills-container>
-          <div class="announcement-bar-mini-trust__pill" data-pill="shipping">
-            <div class="announcement-bar-mini-trust__icon">
-              {{ 'icon-truck.svg' | inline_asset_content }}
-            </div>
-          </div>
-          <div class="announcement-bar-mini-trust__pill" data-pill="genuine">
-            <div class="announcement-bar-mini-trust__icon">
-              {{ 'icon-checkmark.svg' | inline_asset_content }}
-            </div>
-          </div>
-          <div class="announcement-bar-mini-trust__pill" data-pill="support">
-            <div class="announcement-bar-mini-trust__icon">
-              {{ 'icon-chat-bubble.svg' | inline_asset_content }}
-            </div>
-          </div>
+          {%- for block in section.blocks -%}
+            {%- if block.settings.show_item -%}
+              <div class="announcement-bar-mini-trust__pill" data-pill="{{ block.id }}">
+                <div class="announcement-bar-mini-trust__icon">
+                  {%- case block.settings.icon -%}
+                    {%- when 'truck' -%}
+                      {{ 'icon-truck.svg' | inline_asset_content }}
+                    {%- when 'checkmark' -%}
+                      {{ 'icon-checkmark.svg' | inline_asset_content }}
+                    {%- when 'chat' -%}
+                      {{ 'icon-chat-bubble.svg' | inline_asset_content }}
+                    {%- when 'shield' -%}
+                      {{ 'icon-shield.svg' | inline_asset_content }}
+                    {%- when 'heart' -%}
+                      {{ 'icon-heart.svg' | inline_asset_content }}
+                    {%- when 'star' -%}
+                      {{ 'icon-star.svg' | inline_asset_content }}
+                    {%- when 'phone' -%}
+                      {{ 'icon-phone.svg' | inline_asset_content }}
+                    {%- when 'email' -%}
+                      {{ 'icon-email.svg' | inline_asset_content }}
+                    {%- else -%}
+                      {{ 'icon-checkmark.svg' | inline_asset_content }}
+                  {%- endcase -%}
+                </div>
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
         </div>
       </div>
     </div>
@@ -204,12 +210,107 @@
     },
     {
       "type": "paragraph",
-      "content": "This section displays trust indicators with automatic RTL support for Arabic content."
+      "content": "Add trust indicators with bilingual support. Use blocks below to customize each item."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "trust_item",
+      "name": "Trust Item",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "show_item",
+          "label": "Show this item",
+          "default": true
+        },
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            {
+              "value": "truck",
+              "label": "Truck (Shipping)"
+            },
+            {
+              "value": "checkmark",
+              "label": "Checkmark (Quality)"
+            },
+            {
+              "value": "chat",
+              "label": "Chat (Support)"
+            },
+            {
+              "value": "shield",
+              "label": "Shield (Security)"
+            },
+            {
+              "value": "heart",
+              "label": "Heart (Care)"
+            },
+            {
+              "value": "star",
+              "label": "Star (Rating)"
+            },
+            {
+              "value": "phone",
+              "label": "Phone (Contact)"
+            },
+            {
+              "value": "email",
+              "label": "Email (Contact)"
+            }
+          ],
+          "default": "checkmark"
+        },
+        {
+          "type": "text",
+          "id": "text_en",
+          "label": "Text (English)",
+          "default": "Trust indicator text"
+        },
+        {
+          "type": "text",
+          "id": "text_ar",
+          "label": "Text (Arabic)",
+          "default": "نص مؤشر الثقة"
+        }
+      ]
     }
   ],
   "presets": [
     {
-      "name": "Announcement + Trust"
+      "name": "Announcement + Trust",
+      "blocks": [
+        {
+          "type": "trust_item",
+          "settings": {
+            "show_item": true,
+            "icon": "truck",
+            "text_en": "Free shipping over 20 KWD",
+            "text_ar": "شحن مجاني للطلبات فوق 20 د.ك"
+          }
+        },
+        {
+          "type": "trust_item",
+          "settings": {
+            "show_item": true,
+            "icon": "checkmark",
+            "text_en": "100% genuine",
+            "text_ar": "منتجات أصلية 100%"
+          }
+        },
+        {
+          "type": "trust_item",
+          "settings": {
+            "show_item": true,
+            "icon": "chat",
+            "text_en": "WhatsApp support",
+            "text_ar": "دعم واتساب"
+          }
+        }
+      ]
     }
   ]
 }

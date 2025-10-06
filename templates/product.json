@@ -45,6 +45,14 @@
             "show_gift_card_recipient": true
           }
         },
+        "inventory_jA3gpM": {
+          "type": "inventory",
+          "settings": {
+            "text_style": "uppercase",
+            "inventory_threshold": 2,
+            "show_inventory_quantity": false
+          }
+        },
         "complementary_4qm8N3": {
           "type": "complementary",
           "settings": {
@@ -56,24 +64,6 @@
             "pagination_style": "counter",
             "image_ratio": "square",
             "enable_quick_add": true
-          }
-        },
-        "inventory_jA3gpM": {
-          "type": "inventory",
-          "settings": {
-            "text_style": "uppercase",
-            "inventory_threshold": 2,
-            "show_inventory_quantity": false
-          }
-        },
-        "compl_products_qbgLf4": {
-          "type": "compl_products",
-          "settings": {
-            "heading": "Pairs well with",
-            "heading_alignment": "left",
-            "products_limit": 4,
-            "show_quick_add": true,
-            "button_text": "Add to cart"
           }
         },
         "description_collapse_ffJr7c": {
@@ -126,9 +116,8 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "complementary_4qm8N3",
         "inventory_jA3gpM",
-        "compl_products_qbgLf4",
+        "complementary_4qm8N3",
         "description_collapse_ffJr7c",
         "collapsible_tab_tbDBAA",
         "collapsible_tab_yRfYAj",

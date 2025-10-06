@@ -66,6 +66,16 @@
             "show_inventory_quantity": false
           }
         },
+        "compl_products_qbgLf4": {
+          "type": "compl_products",
+          "settings": {
+            "heading": "Pairs well with",
+            "heading_alignment": "left",
+            "products_limit": 4,
+            "show_quick_add": true,
+            "button_text": "Add to cart"
+          }
+        },
         "description_collapse_ffJr7c": {
           "type": "description_collapse",
           "settings": {
@@ -118,6 +128,7 @@
         "buy_buttons",
         "complementary_4qm8N3",
         "inventory_jA3gpM",
+        "compl_products_qbgLf4",
         "description_collapse_ffJr7c",
         "collapsible_tab_tbDBAA",
         "collapsible_tab_yRfYAj",

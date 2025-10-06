@@ -58,7 +58,7 @@
           "settings": {
             "heading": "Product Description",
             "icon": "clipboard",
-            "excerpt_length": 100,
+            "excerpt_length": 50,
             "open_by_default": false
           }
         },

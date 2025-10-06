@@ -1,0 +1,119 @@
+{{ 'component-accordion.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .product-desc-collapse__excerpt {
+    margin-bottom: 1rem;
+    color: rgba(var(--color-foreground), 0.75);
+  }
+
+  .product-desc-collapse__content {
+    margin-top: 1rem;
+  }
+{%- endstyle -%}
+
+{%- assign excerpt_length = section.settings.excerpt_length | default: 100 -%}
+{%- assign description_text = product.description | strip_html | strip -%}
+{%- assign excerpt = description_text | truncate: excerpt_length -%}
+
+<div class="product-desc-collapse section-{{ section.id }}-padding">
+  <div class="page-width">
+    <div class="product__accordion accordion" {{ block.shopify_attributes }}>
+      <details id="Details-{{ section.id }}" {% unless section.settings.open_by_default %}{% endunless %}>
+        <summary>
+          <div class="summary__title">
+            {% render 'icon-accordion', icon: 'clipboard' %}
+            <h2 class="h4 accordion__title inline-richtext">
+              {{ section.settings.heading }}
+            </h2>
+          </div>
+          {% render 'icon-caret' %}
+        </summary>
+        <div class="accordion__content rte" id="ProductAccordion-{{ section.id }}">
+          {%- if section.settings.show_excerpt and excerpt != blank -%}
+            <div class="product-desc-collapse__excerpt">
+              {{ excerpt }}
+            </div>
+          {%- endif -%}
+          <div class="product-desc-collapse__content">
+            {{ product.description }}
+          </div>
+        </div>
+      </details>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Product Desc Collapse",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Product Description"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_excerpt",
+      "label": "Show excerpt",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "excerpt_length",
+      "min": 50,
+      "max": 200,
+      "step": 10,
+      "unit": "char",
+      "label": "Excerpt length",
+      "default": 100
+    },
+    {
+      "type": "checkbox",
+      "id": "open_by_default",
+      "label": "Open by default",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Desc Collapse"
+    }
+  ]
+}
+{% endschema %}

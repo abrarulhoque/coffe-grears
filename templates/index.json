@@ -11,6 +11,7 @@
   "sections": {
     "value_hero_pRJUFL": {
       "type": "value-hero",
+      "disabled": true,
       "name": "Value Hero",
       "settings": {
         "image": "shopify://shop_images/modern-kuwaiti-kitchen-counter-at-sunrise-elegant-pour-over-setup-hario-v60-gooseneck-kettle-light-steam-warm-natural-light-minimal-props-premium-editorial-photo-3-1-aspect-depth-of-f.png",

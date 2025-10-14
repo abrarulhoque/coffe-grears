@@ -99,7 +99,7 @@
           "type": "category",
           "settings": {
             "image": "shopify://shop_images/studio-product-still-life-of-brewing-devices-premium-coffee-tools-aesthetic-soft-side-lighting-matte-backdrop-in-warm-neutral-tones-minimal-composition-photorealistic.png",
-            "label": "test",
+            "label": "Machine",
             "link": ""
           }
         },
@@ -107,7 +107,7 @@
           "type": "category",
           "settings": {
             "image": "shopify://shop_images/studio-product-still-life-of-grinders-premium-coffee-tools-aesthetic-soft-side-lighting-matte-backdrop-in-warm-neutral-tones-minimal-composition-photorealistic.png",
-            "label": "مطاحن القهوة",
+            "label": "Grinder",
             "link": ""
           }
         },
@@ -115,7 +115,7 @@
           "type": "category",
           "settings": {
             "image": "shopify://shop_images/studio-product-still-life-of-mugs-premium-coffee-tools-aesthetic-soft-side-lighting-matte-backdrop-in-warm-neutral-tones-minimal-composition-photorealistic.png",
-            "label": "الفلاتر",
+            "label": "Espresso Tools",
             "link": ""
           }
         },
@@ -123,7 +123,7 @@
           "type": "category",
           "settings": {
             "image": "shopify://shop_images/high-angle-jug-with-coffee-scale-coffee-shop.jpg",
-            "label": "أكواب",
+            "label": "Brewing Tools",
             "link": ""
           }
         },
@@ -131,7 +131,7 @@
           "type": "category",
           "settings": {
             "image": "shopify://shop_images/c_1.png",
-            "label": "أدوات الباريستا",
+            "label": "Accessories",
             "link": ""
           }
         },
@@ -139,7 +139,7 @@
           "type": "category",
           "settings": {
             "image": "shopify://shop_images/VCF_image_1.jpg",
-            "label": "الملحقات",
+            "label": "Scale",
             "link": ""
           }
         },
@@ -147,7 +147,7 @@
           "type": "category",
           "settings": {
             "image": "shopify://shop_images/studio-product-still-life-of-mugs-premium-coffee-tools-aesthetic-soft-side-lighting-matte-backdrop-in-warm-neutral-tones-minimal-composition-photorealistic.png",
-            "label": "قطع الغيار",
+            "label": "Pitchers",
             "link": ""
           }
         },
@@ -155,7 +155,7 @@
           "type": "category",
           "settings": {
             "image": "shopify://shop_images/studio-product-still-life-of-brewing-devices-premium-coffee-tools-aesthetic-soft-side-lighting-matte-backdrop-in-warm-neutral-tones-minimal-composition-photorealistic.png",
-            "label": "وصل حديثًا",
+            "label": "Cleaning Tools",
             "link": ""
           }
         }

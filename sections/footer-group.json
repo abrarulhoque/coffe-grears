@@ -46,9 +46,8 @@
     },
     "footer": {
       "type": "footer",
-      "disabled": true,
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-4",
         "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our Emails",
         "enable_follow_on_shop": true,

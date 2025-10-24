@@ -72,15 +72,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 0, 0, 0.1) 0%,
-    rgba(0, 0, 0, 0.3) 100%
-  );
   display: flex;
   align-items: flex-end;
   padding: 2rem;
-  transition: background 0.3s ease;
 }
 
 /* RTL Overlay positioning */
@@ -157,13 +151,6 @@
   transform: scale(1.05);
 }
 
-.category-card:hover .category-card__overlay {
-  background: linear-gradient(
-    135deg,
-    rgba(0, 0, 0, 0.2) 0%,
-    rgba(0, 0, 0, 0.4) 100%
-  );
-}
 
 .category-card:hover .category-card__link {
   background: rgba(255, 255, 255, 0.3);
@@ -251,10 +238,3 @@
   transform: scale(1.05);
 }
 
-.category-card:focus-within .category-card__overlay {
-  background: linear-gradient(
-    135deg,
-    rgba(0, 0, 0, 0.2) 0%,
-    rgba(0, 0, 0, 0.4) 100%
-  );
-}

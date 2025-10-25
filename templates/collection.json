@@ -37,59 +37,59 @@
         "padding_bottom": 68
       }
     },
-    "collection_showcase_43DQLh": {
+    "collection_showcase_tUXL84": {
       "type": "collection-showcase",
       "blocks": {
-        "collection_wartaa": {
+        "collection_TPPzFa": {
           "type": "collection",
           "settings": {
             "collection": "",
             "custom_label": ""
           }
         },
-        "collection_aKGRgR": {
+        "collection_7yY43c": {
           "type": "collection",
           "settings": {
             "collection": "",
             "custom_label": ""
           }
         },
-        "collection_eVA3Gb": {
+        "collection_CEKewk": {
           "type": "collection",
           "settings": {
             "collection": "",
             "custom_label": ""
           }
         },
-        "collection_YRrzUd": {
+        "collection_FKFdpX": {
           "type": "collection",
           "settings": {
             "collection": "",
             "custom_label": ""
           }
         },
-        "collection_r66TLQ": {
+        "collection_DkixYQ": {
           "type": "collection",
           "settings": {
             "collection": "",
             "custom_label": ""
           }
         },
-        "collection_8q78bq": {
+        "collection_w7QaaU": {
           "type": "collection",
           "settings": {
             "collection": "",
             "custom_label": ""
           }
         },
-        "collection_FkKtcV": {
+        "collection_xLGfbV": {
           "type": "collection",
           "settings": {
             "collection": "",
             "custom_label": ""
           }
         },
-        "collection_bLqQUW": {
+        "collection_qUf3yi": {
           "type": "collection",
           "settings": {
             "collection": "",
@@ -98,20 +98,20 @@
         }
       },
       "block_order": [
-        "collection_wartaa",
-        "collection_aKGRgR",
-        "collection_eVA3Gb",
-        "collection_YRrzUd",
-        "collection_r66TLQ",
-        "collection_8q78bq",
-        "collection_FkKtcV",
-        "collection_bLqQUW"
+        "collection_TPPzFa",
+        "collection_7yY43c",
+        "collection_CEKewk",
+        "collection_FKFdpX",
+        "collection_DkixYQ",
+        "collection_w7QaaU",
+        "collection_xLGfbV",
+        "collection_qUf3yi"
       ],
       "name": "Collection Showcase",
       "settings": {
         "title": "Shop by Collection",
         "heading_size": "h1",
-        "columns_desktop": 4,
+        "columns_desktop": 5,
         "columns_mobile": "2",
         "color_scheme": "",
         "padding_top": 36,
@@ -122,6 +122,6 @@
   "order": [
     "main-collection-banner",
     "main-collection-product-grid",
-    "collection_showcase_43DQLh"
+    "collection_showcase_tUXL84"
   ]
 }

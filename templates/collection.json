@@ -50,14 +50,14 @@
         "collection_7yY43c": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "brewing-gears",
             "custom_label": ""
           }
         },
         "collection_CEKewk": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "frontpage",
             "custom_label": ""
           }
         },
@@ -110,9 +110,9 @@
       "custom_css": [],
       "name": "Collection Showcase",
       "settings": {
-        "title": "Shop by Collection",
+        "title": "",
         "heading_size": "h1",
-        "columns_desktop": 5,
+        "columns_desktop": 8,
         "columns_mobile": "2",
         "color_scheme": "",
         "padding_top": 36,

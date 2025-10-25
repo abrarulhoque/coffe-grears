@@ -36,10 +36,92 @@
         "padding_top": 20,
         "padding_bottom": 68
       }
+    },
+    "collection_showcase_43DQLh": {
+      "type": "collection-showcase",
+      "blocks": {
+        "collection_wartaa": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "custom_label": ""
+          }
+        },
+        "collection_aKGRgR": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "custom_label": ""
+          }
+        },
+        "collection_eVA3Gb": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "custom_label": ""
+          }
+        },
+        "collection_YRrzUd": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "custom_label": ""
+          }
+        },
+        "collection_r66TLQ": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "custom_label": ""
+          }
+        },
+        "collection_8q78bq": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "custom_label": ""
+          }
+        },
+        "collection_FkKtcV": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "custom_label": ""
+          }
+        },
+        "collection_bLqQUW": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "custom_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_wartaa",
+        "collection_aKGRgR",
+        "collection_eVA3Gb",
+        "collection_YRrzUd",
+        "collection_r66TLQ",
+        "collection_8q78bq",
+        "collection_FkKtcV",
+        "collection_bLqQUW"
+      ],
+      "name": "Collection Showcase",
+      "settings": {
+        "title": "Shop by Collection",
+        "heading_size": "h1",
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main-collection-banner",
-    "main-collection-product-grid"
+    "main-collection-product-grid",
+    "collection_showcase_43DQLh"
   ]
 }

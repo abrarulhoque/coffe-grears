@@ -298,6 +298,19 @@
       </div>
     </div>
     <div class="footer__content-bottom-wrapper page-width{% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} footer__content-bottom-wrapper--center{% endif %}">
+      {%- if section.settings.footer_menu != blank -%}
+        <nav class="footer__bottom-menu" role="navigation">
+          <ul class="footer__bottom-menu-list list-unstyled">
+            {%- for link in section.settings.footer_menu.links -%}
+              <li class="footer__bottom-menu-item">
+                <a href="{{ link.url }}" class="footer__bottom-menu-link link">
+                  {{ link.title | escape }}
+                </a>
+              </li>
+            {%- endfor -%}
+          </ul>
+        </nav>
+      {%- endif -%}
       <div class="footer__copyright caption">
         <small class="copyright__content"
           >&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}
@@ -491,6 +504,16 @@
       "default": true,
       "label": "t:sections.footer.settings.show_policy.label",
       "info": "t:sections.footer.settings.show_policy.info"
+    },
+    {
+      "type": "header",
+      "content": "Footer menu"
+    },
+    {
+      "type": "link_list",
+      "id": "footer_menu",
+      "label": "Footer bottom menu",
+      "info": "Select a menu to display in the footer bottom section"
     },
     {
       "type": "header",

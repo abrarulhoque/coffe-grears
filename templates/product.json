@@ -1,1 +1,166 @@
-{"sections":{"main":{"type":"main-product","blocks":{"text":{"type":"text","settings":{"text":"{{ product.vendor }}","text_style":"body"}},"title":{"type":"title","settings":{}},"price":{"type":"price","settings":{}},"variant_picker":{"type":"variant_picker","settings":{"picker_type":"button","swatch_shape":"circle"}},"quantity_selector":{"type":"quantity_selector","settings":{}},"buy_buttons":{"type":"buy_buttons","settings":{"show_dynamic_checkout":true,"show_gift_card_recipient":true}},"inventory_jA3gpM":{"type":"inventory","settings":{"text_style":"uppercase","inventory_threshold":2,"show_inventory_quantity":false}},"description":{"type":"description","settings":{}},"collapsible_tab_tbDBAA":{"type":"collapsible_tab","settings":{"heading":"Key Features | المميزات","icon":"question_mark","content":"<p>{{ product.metafields.custom.description | metafield_tag }}<\/p>","page":""}},"collapsible_tab_yRfYAj":{"type":"collapsible_tab","settings":{"heading":"Use & Care | الاستخدام والعناية","icon":"clipboard","content":"<p>{{ product.metafields.custom.how_to_use | metafield_tag }}<\/p>","page":""}},"collapsible_tab_YKm6by":{"type":"collapsible_tab","settings":{"heading":"Delivery & Returns | الشحن والإرجاع","icon":"truck","content":"<p>• Fast shipping across Kuwait – usually delivered within 1-2 business days<br\/>• Orders are carefully packed to prevent damage<br\/>• Easy returns within 7 days if the product is unused and in original packaging<br\/>• For any issues, contact our customer support for quick assistance<\/p><p><strong>Arabic:<\/strong><br\/><br\/>• شحن سريع في جميع أنحاء الكويت – عادةً يتم التوصيل خلال 1–2 أيام عمل<br\/>• يتم تعبئة الطلبات بعناية لتجنب التلف<br\/>• إمكانية الإرجاع خلال 7 أيام إذا كان المنتج غير مستخدم وفي العبوة الأصلية<br\/>• لأي مشكلة، تواصل مع خدمة العملاء للحصول على دعم سريع<\/p>","page":""}},"share":{"type":"share","settings":{"share_label":"Share"}}},"block_order":["text","title","price","variant_picker","quantity_selector","buy_buttons","inventory_jA3gpM","description","collapsible_tab_tbDBAA","collapsible_tab_yRfYAj","collapsible_tab_YKm6by","share"],"settings":{"enable_sticky_info":true,"color_scheme":"scheme-1","media_size":"medium","constrain_to_viewport":true,"media_fit":"contain","gallery_layout":"thumbnail","mobile_thumbnails":"hide","media_position":"left","image_zoom":"lightbox","hide_variants":false,"enable_video_looping":false,"padding_top":36,"padding_bottom":44}},"related-products":{"type":"related-products","settings":{"heading":"You may also like","heading_size":"h2","products_to_show":4,"columns_desktop":4,"columns_mobile":"2","color_scheme":"scheme-1","image_ratio":"square","image_shape":"default","show_secondary_image":false,"show_vendor":false,"show_rating":false,"padding_top":36,"padding_bottom":68}}},"order":["main","related-products"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "body"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "inventory_jA3gpM": {
+          "type": "inventory",
+          "settings": {
+            "text_style": "uppercase",
+            "inventory_threshold": 2,
+            "show_inventory_quantity": false
+          }
+        },
+        "complementary_4qm8N3": {
+          "type": "complementary",
+          "settings": {
+            "block_heading": "Pairs well with",
+            "make_collapsible_row": true,
+            "icon": "price_tag",
+            "product_list_limit": 10,
+            "products_per_page": 3,
+            "pagination_style": "counter",
+            "image_ratio": "square",
+            "enable_quick_add": true
+          }
+        },
+        "description_collapse_ffJr7c": {
+          "type": "description_collapse",
+          "settings": {
+            "heading": "Product Description",
+            "icon": "clipboard",
+            "excerpt_length": 50,
+            "open_by_default": false
+          }
+        },
+        "collapsible_tab_tbDBAA": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Key Features | المميزات",
+            "icon": "question_mark",
+            "content": "<p>{{ product.metafields.custom.description | metafield_tag }}</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_yRfYAj": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Use & Care | الاستخدام والعناية",
+            "icon": "clipboard",
+            "content": "<p>{{ product.metafields.custom.how_to_use | metafield_tag }}</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_YKm6by": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Delivery & Returns | الشحن والإرجاع",
+            "icon": "truck",
+            "content": "<p>• Fast shipping across Kuwait – usually delivered within 1-2 business days<br/>• Orders are carefully packed to prevent damage<br/>• Easy returns within 14 days if the product is unused and in original packaging<br/>• For any issues, contact our customer support for quick assistance</p><p><strong>Arabic:</strong><br/><br/>• شحن سريع في جميع أنحاء الكويت – عادةً يتم التوصيل خلال 1–2 أيام عمل<br/>• يتم تعبئة الطلبات بعناية لتجنب التلف<br/>• إمكانية الإرجاع خلال 14 أيام إذا كان المنتج غير مستخدم وفي العبوة الأصلية<br/>• لأي مشكلة، تواصل مع خدمة العملاء للحصول على دعم سريع</p>",
+            "page": ""
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text",
+        "title",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "inventory_jA3gpM",
+        "complementary_4qm8N3",
+        "description_collapse_ffJr7c",
+        "collapsible_tab_tbDBAA",
+        "collapsible_tab_yRfYAj",
+        "collapsible_tab_YKm6by",
+        "share"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail",
+        "mobile_thumbnails": "hide",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 44
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 36,
+        "padding_bottom": 68
+      }
+    }
+  },
+  "order": [
+    "main",
+    "related-products"
+  ]
+}

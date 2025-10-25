@@ -5,12 +5,25 @@
   padding: 1.5rem 0;
 }
 
+.accordion .summary__label {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
 .accordion .summary__title {
   display: flex;
   flex: 1;
 }
 
-.accordion .summary__title + .icon-caret {
+.accordion .summary__excerpt {
+  margin: 0;
+  color: rgba(var(--color-foreground), 0.7);
+  line-height: 1.4;
+}
+
+.accordion summary > .icon-caret {
   height: calc(var(--font-heading-scale) * 0.6rem);
 }
 
@@ -44,6 +57,10 @@
 
 .accordion details[open] > summary .icon-caret {
   transform: rotate(180deg);
+}
+
+.accordion details[open] > summary .summary__excerpt {
+  display: none;
 }
 
 .accordion__content {

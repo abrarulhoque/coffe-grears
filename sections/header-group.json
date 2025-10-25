@@ -61,8 +61,8 @@
     }
   },
   "order": [
-    "17550506572bbbcbec",
     "announcement-bar",
+    "17550506572bbbcbec",
     "header"
   ]
 }

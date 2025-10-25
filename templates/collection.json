@@ -111,7 +111,7 @@
       "settings": {
         "title": "Shop by Collection",
         "heading_size": "h1",
-        "columns_desktop": 5,
+        "columns_desktop": 3,
         "columns_mobile": "2",
         "color_scheme": "",
         "padding_top": 36,

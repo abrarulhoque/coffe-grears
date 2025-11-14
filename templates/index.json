@@ -176,13 +176,20 @@
           "settings": {
             "collection": ""
           }
+        },
+        "featured_collection_UckJ44": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
         }
       },
       "block_order": [
         "featured_collection_zEWr8G",
         "featured_collection_Mjrprn",
         "featured_collection_9Mw36a",
-        "featured_collection_ybFL9r"
+        "featured_collection_ybFL9r",
+        "featured_collection_UckJ44"
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {
@@ -190,10 +197,10 @@
         "heading_size": "h1",
         "image_ratio": "portrait",
         "columns_desktop": 5,
-        "color_scheme": "",
-        "show_view_all": true,
+        "color_scheme": "scheme-1",
+        "show_view_all": false,
         "columns_mobile": "2",
-        "swipe_on_mobile": true,
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }

@@ -156,16 +156,22 @@
         "featured_collection_zEWr8G": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "soil-roastery-saudi"
           }
         },
         "featured_collection_Mjrprn": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "finca-roastery-saudi"
           }
         },
         "featured_collection_9Mw36a": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "jebla-roastery-kuwait"
+          }
+        },
+        "featured_collection_ybFL9r": {
           "type": "featured_collection",
           "settings": {
             "collection": ""
@@ -175,18 +181,19 @@
       "block_order": [
         "featured_collection_zEWr8G",
         "featured_collection_Mjrprn",
-        "featured_collection_9Mw36a"
+        "featured_collection_9Mw36a",
+        "featured_collection_ybFL9r"
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {
-        "title": "Collections",
+        "title": "Select Your Beans",
         "heading_size": "h1",
-        "image_ratio": "square",
+        "image_ratio": "portrait",
         "columns_desktop": 5,
         "color_scheme": "",
-        "show_view_all": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "show_view_all": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
       }

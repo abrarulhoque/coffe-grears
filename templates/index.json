@@ -180,7 +180,7 @@
         "featured_collection_UckJ44": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "rawi-roastery-kuwait"
           }
         }
       },
@@ -193,7 +193,7 @@
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {
-        "title": "Select Your Beans",
+        "title": "Specialty Coffee Beans",
         "heading_size": "h1",
         "image_ratio": "portrait",
         "columns_desktop": 5,

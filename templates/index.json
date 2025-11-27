@@ -159,6 +159,12 @@
             "collection": "soil-roastery-saudi"
           }
         },
+        "featured_collection_pKxdzi": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
         "featured_collection_Mjrprn": {
           "type": "featured_collection",
           "settings": {
@@ -186,6 +192,7 @@
       },
       "block_order": [
         "featured_collection_zEWr8G",
+        "featured_collection_pKxdzi",
         "featured_collection_Mjrprn",
         "featured_collection_9Mw36a",
         "featured_collection_ybFL9r",
@@ -196,7 +203,7 @@
         "title": "Specialty Coffee Beans",
         "heading_size": "h1",
         "image_ratio": "portrait",
-        "columns_desktop": 5,
+        "columns_desktop": 6,
         "color_scheme": "scheme-1",
         "show_view_all": false,
         "columns_mobile": "2",

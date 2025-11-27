@@ -203,7 +203,7 @@
         "title": "Specialty Coffee Beans",
         "heading_size": "h1",
         "image_ratio": "portrait",
-        "columns_desktop": 6,
+        "columns_desktop": 5,
         "color_scheme": "scheme-1",
         "show_view_all": true,
         "columns_mobile": "2",

@@ -11,10 +11,6 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
-    "17550506572bbbcbec": {
-      "type": "_blocks",
-      "settings": {}
-    },
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
@@ -40,13 +36,17 @@
         "enable_language_selector": false
       }
     },
+    "17550506572bbbcbec": {
+      "type": "_blocks",
+      "settings": {}
+    },
     "header": {
       "type": "header",
       "settings": {
         "logo_position": "top-center",
         "mobile_logo_position": "center",
         "menu": "header-menu",
-        "menu_type_desktop": "dropdown",
+        "menu_type_desktop": "mega",
         "sticky_header_type": "none",
         "show_line_separator": false,
         "color_scheme": "scheme-1",

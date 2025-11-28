@@ -206,7 +206,7 @@
       "scheme-5": {
         "settings": {
           "background": "#ffffff",
-          "background_gradient": "linear-gradient(180deg, rgba(199, 220, 207, 1), rgba(255, 255, 255, 1) 100%)",
+          "background_gradient": "linear-gradient(180deg, rgba(199, 220, 207, 1), rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 100%)",
           "text": "#3b2f2f",
           "button": "#efecec",
           "button_label": "#3f5147",

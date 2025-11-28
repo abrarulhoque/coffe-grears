@@ -445,6 +445,75 @@
         "padding_top": 8,
         "padding_bottom": 68
       }
+    },
+    "collection_list_fECKND": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_QwCpRF": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "timemore"
+          }
+        },
+        "featured_collection_zaearh": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "pirates-of-coffee-canada"
+          }
+        },
+        "featured_collection_x8xAPE": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "rawi-roastery-kuwait"
+          }
+        },
+        "featured_collection_kkG79T": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "soil-roastery-saudi"
+          }
+        },
+        "featured_collection_YT7Mmt": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "finca-roastery-saudi"
+          }
+        },
+        "featured_collection_JgxMfy": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "urnex"
+          }
+        },
+        "featured_collection_anafVX": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "jebla-roastery-kuwait"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_QwCpRF",
+        "featured_collection_zaearh",
+        "featured_collection_x8xAPE",
+        "featured_collection_kkG79T",
+        "featured_collection_YT7Mmt",
+        "featured_collection_JgxMfy",
+        "featured_collection_anafVX"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "Our Brands",
+        "heading_size": "h1",
+        "image_ratio": "adapt",
+        "columns_desktop": 6,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -457,6 +526,7 @@
     "brewing_method_Lrhnkg",
     "education_guides_Ud6Exz",
     "reviews_social_MiJ8R3",
-    "featured-collection"
+    "featured-collection",
+    "collection_list_fECKND"
   ]
 }

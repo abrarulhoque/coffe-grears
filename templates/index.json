@@ -11,17 +11,16 @@
   "sections": {
     "value_hero_pRJUFL": {
       "type": "value-hero",
-      "disabled": true,
       "name": "Value Hero",
       "settings": {
         "image": "shopify://shop_images/Coffee_Gears_Hero_Banner.webp",
-        "image_overlay_opacity": 20,
+        "image_overlay_opacity": 10,
         "image_height": "medium",
-        "heading": "أدوات قهوة مميزة — مختارة بعناية",
-        "subheading": "معدات أصلية، شحن سريع، دعم من عشّاق القهوة مثلك.",
-        "button_label_1": "تسوق الآن",
+        "heading": "",
+        "subheading": "",
+        "button_label_1": "Shop Now",
         "button_link_1": "",
-        "button_label_2": "تسوق حسب الفئة",
+        "button_label_2": "Shop by Category",
         "button_link_2": ""
       }
     },

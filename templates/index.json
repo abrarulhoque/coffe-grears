@@ -187,6 +187,12 @@
           "settings": {
             "collection": "rawi-roastery-kuwait"
           }
+        },
+        "featured_collection_gAEXER": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "woods-ksa"
+          }
         }
       },
       "block_order": [
@@ -195,7 +201,8 @@
         "featured_collection_Mjrprn",
         "featured_collection_9Mw36a",
         "featured_collection_ybFL9r",
-        "featured_collection_UckJ44"
+        "featured_collection_UckJ44",
+        "featured_collection_gAEXER"
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {

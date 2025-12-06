@@ -11,6 +11,7 @@
   "sections": {
     "value_hero_pRJUFL": {
       "type": "value-hero",
+      "disabled": true,
       "name": "Value Hero",
       "settings": {
         "image": "shopify://shop_images/Coffee_Gears_Hero_Banner.webp",
@@ -30,7 +31,7 @@
         "slide_myq9f9": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Coffee_Gears_Hero_Banner.jpg",
+            "image": "shopify://shop_images/Coffee_Gears_Hero_Banner.webp",
             "image_overlay_opacity": 0,
             "heading": "",
             "heading_size": "h1",
@@ -42,14 +43,13 @@
             "box_align": "bottom-left",
             "text_alignment": "center",
             "text_alignment_mobile": "center",
-            "color_scheme": ""
+            "color_scheme": "scheme-4"
           }
         }
       },
       "block_order": [
         "slide_myq9f9"
       ],
-      "disabled": true,
       "name": "t:sections.slideshow.presets.name",
       "settings": {
         "layout": "full_bleed",

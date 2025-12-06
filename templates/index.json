@@ -193,6 +193,12 @@
           "settings": {
             "collection": "woods-ksa"
           }
+        },
+        "featured_collection_hkgzxF": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "xbloom-xpod"
+          }
         }
       },
       "block_order": [
@@ -202,7 +208,8 @@
         "featured_collection_9Mw36a",
         "featured_collection_ybFL9r",
         "featured_collection_UckJ44",
-        "featured_collection_gAEXER"
+        "featured_collection_gAEXER",
+        "featured_collection_hkgzxF"
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {

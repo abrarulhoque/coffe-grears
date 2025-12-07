@@ -199,6 +199,12 @@
           "settings": {
             "collection": "xbloom-xpod"
           }
+        },
+        "featured_collection_3LBk9R": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "black-knight-ksa"
+          }
         }
       },
       "block_order": [
@@ -209,7 +215,8 @@
         "featured_collection_ybFL9r",
         "featured_collection_UckJ44",
         "featured_collection_gAEXER",
-        "featured_collection_hkgzxF"
+        "featured_collection_hkgzxF",
+        "featured_collection_3LBk9R"
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {

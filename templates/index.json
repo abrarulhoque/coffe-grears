@@ -200,6 +200,12 @@
             "collection": "xbloom-xpod"
           }
         },
+        "featured_collection_LnrMyg": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "kiffa-ksa"
+          }
+        },
         "featured_collection_3LBk9R": {
           "type": "featured_collection",
           "settings": {
@@ -216,6 +222,7 @@
         "featured_collection_UckJ44",
         "featured_collection_gAEXER",
         "featured_collection_hkgzxF",
+        "featured_collection_LnrMyg",
         "featured_collection_3LBk9R"
       ],
       "name": "t:sections.collection-list.presets.name",

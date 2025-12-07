@@ -211,6 +211,12 @@
           "settings": {
             "collection": "black-knight-ksa"
           }
+        },
+        "featured_collection_HJPYmb": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "wolf-roastery-ksa"
+          }
         }
       },
       "block_order": [
@@ -223,7 +229,8 @@
         "featured_collection_gAEXER",
         "featured_collection_hkgzxF",
         "featured_collection_LnrMyg",
-        "featured_collection_3LBk9R"
+        "featured_collection_3LBk9R",
+        "featured_collection_HJPYmb"
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {

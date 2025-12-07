@@ -31,7 +31,7 @@
         "slide_myq9f9": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Coffee_Gears_Hero_Banner.webp",
+            "image": "shopify://shop_images/Coffee_Gears_Hero_Banner_1.png",
             "image_overlay_opacity": 0,
             "heading": "",
             "heading_size": "h1",
@@ -43,7 +43,7 @@
             "box_align": "bottom-left",
             "text_alignment": "center",
             "text_alignment_mobile": "center",
-            "color_scheme": "scheme-4"
+            "color_scheme": "scheme-1"
           }
         }
       },

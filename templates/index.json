@@ -217,6 +217,12 @@
           "settings": {
             "collection": "wolf-roastery-ksa"
           }
+        },
+        "featured_collection_6meF3U": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "olala-ksa"
+          }
         }
       },
       "block_order": [
@@ -230,7 +236,8 @@
         "featured_collection_hkgzxF",
         "featured_collection_LnrMyg",
         "featured_collection_3LBk9R",
-        "featured_collection_HJPYmb"
+        "featured_collection_HJPYmb",
+        "featured_collection_6meF3U"
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {

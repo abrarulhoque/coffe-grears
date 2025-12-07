@@ -70,7 +70,7 @@
           "settings": {
             "image": "shopify://shop_images/Espresso_machine.webp",
             "label": "Machine",
-            "link": ""
+            "link": "shopify://collections/espresso-machine"
           }
         },
         "category_JJmCBp": {

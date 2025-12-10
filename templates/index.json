@@ -229,6 +229,12 @@
           "settings": {
             "collection": "black-sip-ksa"
           }
+        },
+        "featured_collection_Ffa4RX": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "ninety-plus-taiwan"
+          }
         }
       },
       "block_order": [
@@ -244,7 +250,8 @@
         "featured_collection_3LBk9R",
         "featured_collection_HJPYmb",
         "featured_collection_6meF3U",
-        "featured_collection_6WKhwK"
+        "featured_collection_6WKhwK",
+        "featured_collection_Ffa4RX"
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {

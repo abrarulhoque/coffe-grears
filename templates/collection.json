@@ -13,7 +13,7 @@
       "type": "main-collection-banner",
       "settings": {
         "show_collection_description": false,
-        "show_collection_image": true,
+        "show_collection_image": false,
         "color_scheme": "scheme-1"
       }
     },
@@ -50,14 +50,14 @@
         "collection_TPPzFa": {
           "type": "collection",
           "settings": {
-            "collection": "barista-tools",
+            "collection": "hario",
             "custom_label": ""
           }
         },
         "collection_7yY43c": {
           "type": "collection",
           "settings": {
-            "collection": "brewing-gears",
+            "collection": "1zpresso",
             "custom_label": ""
           }
         },
@@ -71,7 +71,7 @@
         "collection_DkixYQ": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "coffee-machine",
             "custom_label": ""
           }
         },

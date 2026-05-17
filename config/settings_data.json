@@ -404,7 +404,7 @@
   },
   "platform_customizations": {
     "custom_css": [
-      ".header__menu-item {font-size: 4px;}"
+      ".header__menu-item {font-size: 12px;}"
     ]
   }
 }

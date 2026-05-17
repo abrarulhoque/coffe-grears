@@ -3595,6 +3595,7 @@ details-disclosure > details {
     transform: translateX(100%) scaleX(0);
   }
 }
-header__menu-item {
+
+.header__menue-item {
     font-size: 18px !important;
 }

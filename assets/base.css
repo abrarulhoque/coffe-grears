@@ -3595,7 +3595,3 @@ details-disclosure > details {
     transform: translateX(100%) scaleX(0);
   }
 }
-
-.header__menue-item {
-    font-size: 2px !important;
-}
